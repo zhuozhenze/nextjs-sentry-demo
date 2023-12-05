@@ -20,9 +20,46 @@ export default function Server() {
   }
 
   return (
-    <form action={myServerAction}>
-      <input type="text" name="some-input-value" />
-      <button type="submit">Run Action</button>
-    </form>
+    <div
+      style={{
+        backgroundColor: "#ffffff",
+        position: "absolute",
+        left: 0,
+        right: 0,
+        top: 0,
+        bottom: 0,
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        flexDirection: "column",
+      }}
+    >
+      <form
+        action={myServerAction}
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          flexDirection: "column",
+        }}
+      >
+        <input
+          type="text"
+          name="some-input-value"
+          style={{ border: "1px solid blue" }}
+        />
+        <button
+          type="submit"
+          style={{
+            backgroundColor: "grey",
+            color: "#ffffff",
+            padding: "5px 10px",
+            marginTop: 10,
+          }}
+        >
+          上报transaction到sentry
+        </button>
+      </form>
+    </div>
   );
 }
